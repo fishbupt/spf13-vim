@@ -19,17 +19,6 @@ let g:spf13_no_big_font=1
 " YCM-Generator
 Bundle 'rdnetto/YCM-Generator'
 
-" Fold
-Bundle 'Konfekt/FastFold'
-Bundle 'Konfekt/FoldText'
-
-UnBundle 'scrooloose/syntastic'
-UnBundle 'bling/vim-bufferline'
-
-" neomake
-Bundle 'neomake/neomake'
-autocmd! BufWritePost *Neomake
-
 Bundle 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 
 " buffer explorer
@@ -82,3 +71,19 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Ack key maps
 nnoremap <F12> :Ack<CR>
 
+" {{{ typescript
+Bundle 'leafgarland/typescript-vim'
+Bundle 'Quramy/vim-js-pretty-template'
+Bundle 'Quramy/tsuquyomi'
+Bundle 'Shougo/vimproc.vim'
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkes = ['tsuquyomi']
+
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+" }}}
