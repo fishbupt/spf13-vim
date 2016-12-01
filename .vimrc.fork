@@ -11,6 +11,5 @@ set nospell                     " Disable spell checking
 
 " settings for neovim
 " enable true color
-set termguicolors
+" set termguicolors
 " change cursor sharp in the terminal
-:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1

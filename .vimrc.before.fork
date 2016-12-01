@@ -9,3 +9,14 @@ let g:spf13_bundle_groups=['general', 'programming', 'youcompleteme']
 let g:airline_powerline_fonts=1
 
 set encoding=utf-8
+
+if (has("nvim"))
+  " change cursor sharp in the terminal
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPR=1
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  " settings for neovim
+  " enable true color
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
