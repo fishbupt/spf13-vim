@@ -8,6 +8,10 @@ set expandtab                   " Tabs are spaces, not tabs
 set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
 set nospell                     " Disable spell checking
+if (has("nvim"))
+  set inccommand=nosplit          " show the effects of a command incrementally
+  set clipboard+=unnamedplus      " use unamed register to incorporate with clipboard
+endif
 
 " settings for neovim
 " enable true color
