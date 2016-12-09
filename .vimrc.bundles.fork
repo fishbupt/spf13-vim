@@ -86,7 +86,6 @@ let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkes = ['tsuquyomi']
 
 autocmd FileType typescript JsPreTmpl html
-autocmd FileType typescript syn clear foldBraces
 " }}}
 
 

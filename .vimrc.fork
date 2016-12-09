@@ -13,7 +13,5 @@ if (has("nvim"))
   set clipboard+=unnamedplus      " use unamed register to incorporate with clipboard
 endif
 
-" settings for neovim
-" enable true color
-" set termguicolors
-" change cursor sharp in the terminal
+" syntastic
+let g:syntastic_javascript_checkers=['eslint']

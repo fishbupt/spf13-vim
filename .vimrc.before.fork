@@ -3,7 +3,7 @@ set langmenu=en_US.UTF-8   " sets the language of the menu
 " not switch pwd when opening new file
 let g:spf13_no_autochdir = 1
 
-let g:spf13_bundle_groups=['general', 'programming', 'youcompleteme', 'misc']
+let g:spf13_bundle_groups=['general', 'youcompleteme', 'programming', 'javascript', 'html', 'misc',]
 "let g:spf13_bundle_groups=['general', 'programming', 'html', 'javascript']
 
 let g:airline_powerline_fonts=1
@@ -12,8 +12,11 @@ set encoding=utf-8
 
 if (has("nvim"))
   " change cursor sharp in the terminal
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPR=1
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+  let &t_SI="\<Esc>]50;CursorSharp=1\x7"
+  let &t_EI="\<Esc>]50;CursorSharp=0\x7"
   " settings for neovim
   " enable true color
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
